@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script>
+	function BS() {
+		// body...back
+    calculator.res.value=calculator.res.value.slice(0,calculator.res.value.length-1);
+	}
+</script>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		background-color: rgb(3, 2, 88);
+		display: grid;
+		place-items: center;
+		height: 100vh;
+	}
+	#textbox{
+		border: 3px solid red;
+		text-align: right;
+ width:250px; 
+ height: 42px;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ margin-left: .5rem;
+ font-size: 30px;
+ font-family: Dark seed;
+ border-radius: 10px;
+	}
+	#main{
+		position: relative;
+		/* left: 500px;
+		top: 100px; */
+		border: 1px solid red; 
+		width: 280px;
+		height: 400px;
+		border-radius: 10px;
+		background-color: rgb(32, 3, 112);
+	}
+	.btn{
+		border: none;
+		width: 54px;
+		height: 54px;
+		border-radius: 80px;
+		padding: 10px;
+		margin-right: 4px;
+		margin-bottom: 5px;
+		margin-left: 8px;
+		margin-top: 3px;
+		background-color: #FFE4C4;
+		font-size: 25px;
+		font-family: Dark seed;
+		color: red;
+	}
+	.btn:hover{
+		border: 3px solid red;
+		color:rgb(32, 3, 112);
+	}
+	.clear{
+		width: : 20px;
+	}
+</style>
+
+<body>
+	<div id="main">
+	<form name="calculator">
+		<input id="textbox" type="text" name="res">
+		<br/>
+		<input class="btn"type="button"value="C"onclick="calculator.res.value=''"class="clear">
+		<input class="btn"type="button"value="("onclick="calculator.res.value+=')'">
+		<input class="btn"type="button"value=")"onclick="calculator.res.value+=')'">
+		<input class="btn"type="button"value="/"onclick="calculator.res.value+='/'">
+		<br/>
+		<input class="btn"type="button"value="7"onclick="calculator.res.value+='7'">
+		<input class="btn"type="button"value="8"onclick="calculator.res.value+='8'">
+		<input class="btn"type="button"value="9"onclick="calculator.res.value+='9'">
+		<input class="btn"type="button"value="X"onclick="calculator.res.value+='*'">
+		<br/>
+		<input class="btn"type="button"value="4"onclick="calculator.res.value+='4'">
+		<input class="btn"type="button"value="5"onclick="calculator.res.value+='5'">
+		<input class="btn"type="button"value="6"onclick="calculator.res.value+='6'">
+		<input class="btn"type="button"value="-"onclick="calculator.res.value+='-'">
+		<br/>
+		<input class="btn"type="button"value="1"onclick="calculator.res.value+='1'">
+		<input class="btn"type="button"value="2"onclick="calculator.res.value+='2'">
+		<input class="btn"type="button"value="3"onclick="calculator.res.value+='3'">
+		<input class="btn"type="button"value="+"onclick="calculator.res.value+='+'">
+		<br/>
+		<input class="btn"type="button"value="."onclick="calculator.res.value+='.">
+		<input class="btn"type="button"value="0"onclick="calculator.res.value+='0'">
+		<input class="btn"type="button"value="<"onclick="calculator.res.value=''">
+		
+		<input class="btn"type="button"value="="onclick="calculator.res.value=eval(calculator.res.value)">
+	</form>
+</div>
+</body>
+</html>
